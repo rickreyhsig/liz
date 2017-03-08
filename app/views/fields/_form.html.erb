@@ -11,6 +11,9 @@
     </div>
   <% end %>
 
+  <span class="field">
+    <%= f.hidden_field :project_id, value: params[:project_id] %>
+  </span>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>

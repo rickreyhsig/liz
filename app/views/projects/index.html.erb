@@ -14,9 +14,10 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.last_name %></td>
-        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'View', project %></td>
+        <td><%= link_to 'Add Fields', new_field_path(project_id: project.id) %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
